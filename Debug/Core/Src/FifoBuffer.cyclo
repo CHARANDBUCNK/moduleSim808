@@ -1,0 +1,13 @@
+../Core/Src/FifoBuffer.c:12:7:PBufferPointer	1
+../Core/Src/FifoBuffer.c:27:6:InitBufferNoDynamic	1
+../Core/Src/FifoBuffer.c:39:6:ResetBuffer	1
+../Core/Src/FifoBuffer.c:49:11:CreateBuffer	1
+../Core/Src/FifoBuffer.c:66:6:WriteBuffer	1
+../Core/Src/FifoBuffer.c:76:7:ReadBuffer	1
+../Core/Src/FifoBuffer.c:89:7:ReturnCurrentPositionBuffer	5
+../Core/Src/FifoBuffer.c:127:6:IncIterator	2
+../Core/Src/FifoBuffer.c:134:6:DecIterator	2
+../Core/Src/FifoBuffer.c:141:6:ResetParameters	2
+../Core/Src/FifoBuffer.c:152:6:EraseBuffer	1
+../Core/Src/FifoBuffer.c:160:13:NumberOfElemnts	1
+../Core/Src/FifoBuffer.c:166:6:writeStringToBuffer	2
