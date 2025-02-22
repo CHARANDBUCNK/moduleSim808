@@ -45,15 +45,20 @@ char ReadElement(void* pParameters )
 //+CMGR: "REC READ","xxxxxxxxxxxxx","","25/02/10,14:12:27-24"{0D}{0A}Hola{0D}{0A}{0D}{0A}OK{0D}{0A}
 void simFunctionsPruebe( UART_HandleTypeDef* pParameter )
 {
-	char Message[] = "+CMGR: \"REC READ\",\"xxxxxxxxxxxxx\",\"\",\"25/02/10,14:12:27-24\"\r\nHola\r\nOK\r\n";
+	char Message[] = "+CMGR: \"REC READ\",\"9215555x\",\"\",\"25/02/10,14:12:27-24\"\r\nHola\r\nOK\r\n";
 
 	messageParts_t tempPruebe ;
+
+	memset(&tempPruebe , 0 , sizeof(tempPruebe));
 
 	my_printf(pParameter, " testing Functions ");
 
 	GetDateTimeAndPhone( Message ,&tempPruebe );
 
-	my_printf(pParameter, "%s" );
+
+
+
+	my_printf(pParameter, "Phone Number:%s\r\nDate:%s\r\nTime:%s\r\n",tempPruebe.PhoneNumber ,tempPruebe.Date , tempPruebe.Time );
 }
 
 #define ARRAY_DEBUGGER 50

@@ -519,7 +519,7 @@ char* DataBetweenCharacter( char* pData , char* pDataToCopy , char* pFirstElemnt
 	char* pFirstEndString[ 2 ] = { NULL , NULL }; // save first and second position
 	char* pElemntsToFind [ ] = { pFirstElemnt , pSecondElemnt };// itr through
 
-	while( (pData[ itrTempString ] != '\0') && (pData[ ++itrTempString ] != '\0') && (itrPathers != 2)  )
+	while( (pData[ itrTempString ] != '\0') && (pData[ 1 + itrTempString ] != '\0') && (itrPathers != 2)  )
 	{
 		if( pData[ itrTempString++ ] == *pElemntsToFind[ itrPathers ] )
 		{
@@ -538,9 +538,10 @@ char* DataBetweenCharacter( char* pData , char* pDataToCopy , char* pFirstElemnt
 
 	if( itrPathers == 2)
 	{
-		size_t nElementsPosition =  pFirstEndString[0] - pFirstEndString[ 1 ] ;
+		size_t nElementsPosition =  pFirstEndString[1] - pFirstEndString[ 0 ] ;
 
-		strncpy( pDataToCopy , pFirstEndString[ 0 ] , nElementsPosition );
+		strncpy( pDataToCopy , pFirstEndString[ 0 ] , nElementsPosition + 1 );
+
 
 		return pFirstEndString[ 1 ] + 1;
 	}
